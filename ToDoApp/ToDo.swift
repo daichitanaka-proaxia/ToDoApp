@@ -17,4 +17,8 @@ internal class ToDoData: ObservableObject {
     internal func remove(offsets: IndexSet){
         self.items.remove(atOffsets: offsets)
     }
+    
+    internal func update(index:Int,updateItem:String){
+        self.items[index] = updateItem
+    }
 }

@@ -12,9 +12,16 @@ struct DetailView: View {
     var todo: String
     
     var body: some View {
-        Text(todo).navigationTitle("ToDo Detail")
-    }
 
+        VStack{
+            Text(todo).navigationTitle("ToDo Detail")
+        }.navigationBarItems(trailing: toEditView)
+        
+    }
+    
+    var toEditView: some View {
+        NavigationLink(destination: EditView(todo:todo)){ Image(systemName: "pencil") }
+    }
 }
 
 struct DetailView_Preview: PreviewProvider {

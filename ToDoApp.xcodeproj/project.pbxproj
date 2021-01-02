@@ -16,6 +16,7 @@
 		08BF2AA925A007C500FF1618 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF2AA825A007C500FF1618 /* ToDo.swift */; };
 		08BF2AAC25A00CB200FF1618 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF2AAB25A00CB200FF1618 /* AddView.swift */; };
 		08BF2AAF25A00D2400FF1618 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF2AAE25A00D2400FF1618 /* DetailView.swift */; };
+		08BF2AB325A0282800FF1618 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF2AB225A0282800FF1618 /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		08BF2AA825A007C500FF1618 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		08BF2AAB25A00CB200FF1618 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		08BF2AAE25A00D2400FF1618 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		08BF2AB225A0282800FF1618 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				08BF2A9725A007AC00FF1618 /* ContentView.swift */,
 				08BF2AAE25A00D2400FF1618 /* DetailView.swift */,
 				08BF2AAB25A00CB200FF1618 /* AddView.swift */,
+				08BF2AB225A0282800FF1618 /* EditView.swift */,
 				08BF2AA825A007C500FF1618 /* ToDo.swift */,
 				08BF2A9925A007AE00FF1618 /* Assets.xcassets */,
 				08BF2A9E25A007AE00FF1618 /* LaunchScreen.storyboard */,
@@ -158,6 +161,7 @@
 				08BF2AAF25A00D2400FF1618 /* DetailView.swift in Sources */,
 				08BF2AAC25A00CB200FF1618 /* AddView.swift in Sources */,
 				08BF2A9625A007AC00FF1618 /* SceneDelegate.swift in Sources */,
+				08BF2AB325A0282800FF1618 /* EditView.swift in Sources */,
 				08BF2A9825A007AC00FF1618 /* ContentView.swift in Sources */,
 				08BF2AA925A007C500FF1618 /* ToDo.swift in Sources */,
 			);
