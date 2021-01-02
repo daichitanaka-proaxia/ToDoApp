@@ -20,8 +20,8 @@ struct ContentView: View {
     
     var list: some View {
         List{
-            ForEach(todoData.items, id: \.self){ item in
-                NavigationLink(destination: DetailView(todo: item)){Text(item)}
+            ForEach(todoData.items){ item in
+                NavigationLink(destination: DetailView(todo: item)){Text(item.title)}
             }.onDelete(perform: todoData.remove)
         }
     }

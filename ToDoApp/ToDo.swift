@@ -8,9 +8,9 @@
 import Foundation
 
 internal class ToDoData: ObservableObject {
-    @Published var items:[String] = []
+    @Published var items:[ToDo] = []
     
-    internal func add(item:String){
+    internal func add(item:ToDo){
         self.items.append(item)
     }
     
@@ -18,7 +18,21 @@ internal class ToDoData: ObservableObject {
         self.items.remove(atOffsets: offsets)
     }
     
-    internal func update(index:Int,updateItem:String){
-        self.items[index] = updateItem
+    internal func update(todo:ToDo,title:String){
+        guard let index = self.items.firstIndex(of: todo) else { return }
+        self.items[index].title = title
+    }
+    
+}
+
+internal  struct ToDo:Identifiable,Equatable {
+    var id:UUID = UUID()
+    var title:String = ""
+}
+
+extension ToDo {
+    public static func ==(lhs:ToDo, rhs:ToDo) -> Bool {
+        return lhs.id == rhs.id
     }
 }
+

@@ -18,7 +18,7 @@ struct AddView: View {
             TextField("タイトルを入力してください",text:$todo).textFieldStyle(RoundedBorderTextFieldStyle()).padding()
             Button(action: {
                 if canAdd(item: todo){
-                todoData.add(item: self.todo)
+                todoData.add(item: ToDo(id: UUID(), title: todo))
                 self.presentaionMode.wrappedValue.dismiss()
                 }
             }){ buttonLabel }

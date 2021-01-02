@@ -9,24 +9,24 @@ import SwiftUI
 
 struct DetailView: View {
     @EnvironmentObject var todoData:ToDoData
-    var todo: String
+    var todo: ToDo
     
     var body: some View {
 
         VStack{
-            Text(todo).navigationTitle("ToDo Detail")
+            Text(todo.title).navigationTitle("ToDo Detail")
         }.navigationBarItems(trailing: toEditView)
         
     }
     
     var toEditView: some View {
-        NavigationLink(destination: EditView(todo:todo)){ Image(systemName: "pencil") }
+        NavigationLink(destination: EditView(todo:todo, title: todo.title)){ Image(systemName: "pencil") }
     }
 }
 
 struct DetailView_Preview: PreviewProvider {
     static let todoData = ToDoData()
-    static var todo:String = ""
+    static var todo:ToDo = ToDo()
 
     static var previews: some View {
         DetailView(todo:todo).environmentObject(todoData)

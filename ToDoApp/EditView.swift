@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct EditView: View {
-    @State var todo:String = ""
+    @State var todo:ToDo
+    @State var title:String
     @State var showingAlert = false
     @Environment(\.presentationMode) var presentaionMode
     @EnvironmentObject var todoData:ToDoData
     
     var body: some View {
         VStack {
-            TextField(todo,text:$todo).textFieldStyle(RoundedBorderTextFieldStyle()).padding()
+            TextField(todo.title, text: $title).textFieldStyle(RoundedBorderTextFieldStyle()).padding()
             Button(action: {
-                    let updateItem = $todo.wrappedValue
-                    todoData.update(index:0,updateItem: updateItem)
+                if canUpdate(item: $title){
+                    todoData.update(todo:todo,title:$title.wrappedValue)
                     self.presentaionMode.wrappedValue.dismiss()
+                }
             }){ buttonLabel }
         }
 
@@ -31,19 +33,20 @@ struct EditView: View {
         .background(Color.blue)
         .cornerRadius(10)
     
-    private func canUpdate(item:String?) -> Bool{
-        if item == "" { return false }
-        if item == nil { return false }
+    private func canUpdate(item:Binding<String>) -> Bool{
+        if item.wrappedValue == "" { return false }
+        if item.wrappedValue == nil { return false }
         return true
     }
+    
     
     
 }
 
 struct EditView_Previews: PreviewProvider {
     static let todoData = ToDoData()
-    static var todo:String = ""
+    static var todo:ToDo = ToDo()
     static var previews: some View {
-        EditView(todo: todo).environmentObject(todoData)
+        EditView(todo: todo, title: todo.title).environmentObject(todoData)
     }
 }
