@@ -22,7 +22,7 @@ struct ContentView: View {
         List{
             ForEach(todoData.items, id: \.self){ item in
                 NavigationLink(destination: DetailView(todo: item)){Text(item)}
-            }
+            }.onDelete(perform: todoData.remove)
         }
     }
     
@@ -37,6 +37,7 @@ struct ContentView: View {
             return Text("現在 ToDo はありません")
         }
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

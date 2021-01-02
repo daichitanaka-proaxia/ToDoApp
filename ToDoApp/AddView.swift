@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddView: View {
     @State var item = ""
+    @State var showingAlert = false
     @Environment(\.presentationMode) var presentaionMode
     @EnvironmentObject var todoData:ToDoData
     

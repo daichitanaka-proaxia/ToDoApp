@@ -13,4 +13,8 @@ internal class ToDoData: ObservableObject {
     internal func add(item:String){
         self.items.append(item)
     }
+    
+    internal func remove(offsets: IndexSet){
+        self.items.remove(atOffsets: offsets)
+    }
 }
