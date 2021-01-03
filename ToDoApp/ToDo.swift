@@ -23,11 +23,17 @@ internal class ToDoData: ObservableObject {
         self.items[index].title = title
     }
     
+    internal func done(todo:ToDo){
+        guard let index = self.items.firstIndex(of: todo) else { return }
+        self.items[index].isDone = true
+    }
+    
 }
 
 internal  struct ToDo:Identifiable,Equatable {
-    var id:UUID = UUID()
-    var title:String = ""
+    internal var id:UUID = UUID()
+    internal var title:String = ""
+    internal var isDone:Bool = false
 }
 
 extension ToDo {

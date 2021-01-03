@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0876C8B025A1C69300CF4D72 /* ToDoListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876C8AF25A1C69300CF4D72 /* ToDoListRowView.swift */; };
 		08BF2A9425A007AC00FF1618 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF2A9325A007AC00FF1618 /* AppDelegate.swift */; };
 		08BF2A9625A007AC00FF1618 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF2A9525A007AC00FF1618 /* SceneDelegate.swift */; };
 		08BF2A9825A007AC00FF1618 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BF2A9725A007AC00FF1618 /* ContentView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0876C8AF25A1C69300CF4D72 /* ToDoListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListRowView.swift; sourceTree = "<group>"; };
 		08BF2A9025A007AC00FF1618 /* ToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08BF2A9325A007AC00FF1618 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08BF2A9525A007AC00FF1618 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				08BF2AAB25A00CB200FF1618 /* AddView.swift */,
 				08BF2AB225A0282800FF1618 /* EditView.swift */,
 				08BF2AA825A007C500FF1618 /* ToDo.swift */,
+				0876C8AF25A1C69300CF4D72 /* ToDoListRowView.swift */,
 				08BF2A9925A007AE00FF1618 /* Assets.xcassets */,
 				08BF2A9E25A007AE00FF1618 /* LaunchScreen.storyboard */,
 				08BF2AA125A007AE00FF1618 /* Info.plist */,
@@ -162,6 +165,7 @@
 				08BF2AAC25A00CB200FF1618 /* AddView.swift in Sources */,
 				08BF2A9625A007AC00FF1618 /* SceneDelegate.swift in Sources */,
 				08BF2AB325A0282800FF1618 /* EditView.swift in Sources */,
+				0876C8B025A1C69300CF4D72 /* ToDoListRowView.swift in Sources */,
 				08BF2A9825A007AC00FF1618 /* ContentView.swift in Sources */,
 				08BF2AA925A007C500FF1618 /* ToDo.swift in Sources */,
 			);

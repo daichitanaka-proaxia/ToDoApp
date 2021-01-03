@@ -21,7 +21,8 @@ struct ContentView: View {
     var list: some View {
         List{
             ForEach(todoData.items){ item in
-                NavigationLink(destination: DetailView(todo: item)){Text(item.title)}
+                ToDoListRowView(todo: item)
+               // NavigationLink(destination: DetailView(todo: item)){Text(item.title)}
             }.onDelete(perform: todoData.remove)
         }
     }
